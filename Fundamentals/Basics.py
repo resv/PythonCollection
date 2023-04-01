@@ -4,7 +4,7 @@ https://www.programiz.com/python-programming/online-compiler/
 #PRINT STATEMENT
 print('hello')
 
-#PRINT VARIABLE
+#PRINT ASSIGNMENT
 x = 6
 print(x)
 
@@ -13,7 +13,7 @@ x = 43
 x = x + 1
 print(x)
 
-#IF STATEMENT
+#IF STATEMENT / CONDITIONAL STEPS
 #indentation aka 4 spaces is important. Colons are necessary
 #prints smaller then finis, "bigger" is skipped due to the 1st if being statisfied
 x = 5
