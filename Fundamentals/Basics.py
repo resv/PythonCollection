@@ -72,3 +72,11 @@ print('Blastoff!')
 #Multiplication * and Division /  
 #Addition + and Subtraction -    
 #You might find the PEMDAS mnemonic device to be helpful in remembering the order.   
+
+#find out data type 
+# print(type("a"))
+   #<class 'str'>
+# print(type("2"))
+   #<class 'int'>
+# print(type(2.5))
+   #<class 'float'>
