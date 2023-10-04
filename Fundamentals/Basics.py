@@ -44,3 +44,10 @@ print('Blastoff!')
 
 #MNEMONIC = MEMORY AID
 #Choosing a variable name that helps us remember what we intend to store.
+
+#KEYWORDS
+#Values: True, False, None
+#Conditions: if, elif, else
+#Logical operators: and, or, not
+#Loops: for, in, while, break, continue
+#Functions: def, return  
