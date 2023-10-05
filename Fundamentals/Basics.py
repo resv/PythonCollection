@@ -90,4 +90,33 @@ print('Blastoff!')
 # explicit conversion - when code is written to manually convert one data type to another using a data type conversion function:
 # str() - converts a value (often numeric) to a string data type
 # int() - converts a value (usually a float) to an integer data type
-# float() - converts a value (usually an integer) to a float data type
+# float() - converts a value (usually an integer) to a float data type?
+
+Function basic
+# def greeting(name, department):
+#    print("welcome, " + name)
+#    print("You are part of " + department)
+# >>> greeting("blake", "IT Support")
+#Welcome, Blake
+#You are part of IT Support
+
+Function return
+#def area_triangle(base, height):
+#    return base*height/2
+#area_a = area_triangle(5,4)
+#area_b = area_triangle(7,3)
+#sum = area_a + area_b
+#print("the sum of both triangles is : " + str(sum))
+#the sum of both triangles is: 20.5
+
+Terms
+#return value - the value or variable returned as the end result of a function
+#parameter (argument) -  a value passed into a function for use within the function
+#refactoring code - a process to restructure code without changing functionality
+
+Knowledge
+#The purpose of the def() keyword is to define a new function. 
+#Best practices for writing code that is readable and reusable:
+#Create a reusable function - Replace duplicate code with one reusable function to make the code easier to read and repurpose.
+#Refactor code - Update code so that it is self-documenting and the intent of the code is clear.
+#Add comments - Adding comments is part of creating self-documenting code. Using comments allows you to leave notes to yourself and/or other programmers to make the purpose of the code clear.
