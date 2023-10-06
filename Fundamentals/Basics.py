@@ -185,3 +185,27 @@ True
 today = "Monday"
 print(not today == "Tuesday") 
 True
+
+Conditions will only run if True
+also we can start a non sub indented line to return something else. using it as an else itself without stating else.
+
+def is_even(number:
+    if number % 2 ==0:
+        return True
+    return False
+^^^^^^ This code will check if there is a remainder (modulo operator) if number is divded by 2 and then return True if true 
+or it will fall back and just return False
+
+elif statements
+An elif statement must follow an if statement, and will only be evaluated if the if statement was evaluated as false
+If condition1 is True: Then perform action1 and exit if-elif-else block
+If condition2 is True: Then perform action2 and exit if-elif-else block
+If neither condition1 nor condition2 are True: Then perform action3 and exit if-elif-else block
+
+Syntax of an if-elif-else block
+if condition1:
+    action1
+elif condition2:
+    action2
+else:
+    action3
