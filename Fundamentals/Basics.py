@@ -120,3 +120,68 @@ Knowledge
 #Create a reusable function - Replace duplicate code with one reusable function to make the code easier to read and repurpose.
 #Refactor code - Update code so that it is self-documenting and the intent of the code is clear.
 #Add comments - Adding comments is part of creating self-documenting code. Using comments allows you to leave notes to yourself and/or other programmers to make the purpose of the code clear.
+
+The comparison operators include: 
+==    (equality) 
+!=     (not equal to) 
+>       (greater than)
+<      (less than)
+>=    (greater than or equal to)
+<=    (less than or equal to)
+
+print(10-4 != 10+4) # The != operator checks if the 2 values are
+True                # NOT equal to each other. If true, Python              
+                    # returns a True result. 
+
+The comparison operators greater than > and less than < can be used to alphabetize words in Python. 
+The letters of the alphabet have numeric codes in Unicode (also known as ASCII values). 
+The uppercase letters A to Z are represented by the Unicode values 65 to 90. The lowercase letters 
+a to z are represented by the Unicode values 97 to 122.     
+(upper case is lower on ascii values)
+
+ If the strings have the same first few letters, the comparison will 
+# cycle through each letter of each string, from left to right until it 
+# finds two letters that have different Unicode values
+print("sunbathe" > "suntan")
+False
+
+var1 = "my computer" >= "my chair"
+var2 = "Spring" <= "Winter"
+var3 = "pineapple" >= "pineapple"
+print("Is \"my computer\" greater than or equal to \"my chair\"? Result: ", var1)
+print("Is \"Spring\" less than or equal to \"Winter\"? Result: ", var2)
+print("Is \"pineapple\" less than or equal to \"pineapple\"? Result: ", var3)
+
+Is "my computer" greater than or equal to "my chair"? Result:  True
+Is "Spring" less than or equal to "Winter"? Result:  True
+Is "pineapple" less than or equal to "pineapple"? Result:  True
+
+
+OR output
+Expression1 Expression2 Result
+True        True        True
+True        False       True
+False       True        True
+False       False       False
+
+# False or False returns False
+
+The not logical operator inverts the value of the comparison expression
+This is a helpful tool when you want to execute a block of code as long as a certain condition is not present.
+-If the conditional  expression is True, the not logical operator can be added to make the expression not True (False). 
+-If the conditional  expression is False, the not logical operator can be added to make the expression not False (True).  
+
+x = 2*3 > 6
+print("The value of x is:")
+print(x)
+The value of x is:
+False
+
+print("The inverse value of x is:")
+print(not x)
+The inverse value of x is:
+True
+
+today = "Monday"
+print(not today == "Tuesday") 
+True
