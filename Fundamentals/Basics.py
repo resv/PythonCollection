@@ -244,6 +244,32 @@ Failure to initialize variables. Make sure all the variables used in the loop’
 Unintended infinite loops. Make sure that the body of the loop modifies the variables used in the condition, so that the loop will
  eventually end for all possible values of the variables. You can often prevent an infinite loop by using the break keyword or by 
  adding end criteria to the condition part of the while loop.
+e.g. of break
+def addition_table(given_number):
+    iterated_number = 1
+    my_sum = 1
+    while iterated_number <= 5:
+        my_sum = given_number + iterated_number
+        if my_sum > 20:
+            break
+        print(str(given_number), "+", str(iterated_number), "=", str(my_sum))
+        iterated_number += 1
+5 + 1 = 6
+5 + 2 = 7
+5 + 3 = 8
+5 + 4 = 9
+5 + 5 = 10
+17 + 1 = 18
+17 + 2 = 19
+17 + 3 = 20
+
+** divisor is a number that divides into another without a remainder
+
+
+
+
+
+
 
 # prime numbers - Integers that have only two factors, which are the number itself multiplied by 1. The lowest prime number is 2.
 # prime factors - Prime numbers that are factors of an integer. For example, the prime numbers 2 and 5 are the prime factors of the number 10 
