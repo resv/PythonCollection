@@ -209,3 +209,46 @@ elif condition2:
     action2
 else:
     action3
+
+Incrementation
+# x += 1  is the same thing as x = x + 1
+
+
+while Loops
+A while loop executes the body of the loop while a specified condition remains True.
+
+e.g.
+multiplier = 1
+result = multiplier*5
+while result <= 50:
+  print(result)
+  multiplier += 1
+  result = multiplier*5
+print("Done")
+
+result:
+5
+10
+15
+20
+25
+30
+35
+40
+45
+50
+Done
+
+Failure to initialize variables. Make sure all the variables used in the loop’s condition are initialized before the loop.
+
+Unintended infinite loops. Make sure that the body of the loop modifies the variables used in the condition, so that the loop will
+ eventually end for all possible values of the variables. You can often prevent an infinite loop by using the break keyword or by 
+ adding end criteria to the condition part of the while loop.
+
+# prime numbers - Integers that have only two factors, which are the number itself multiplied by 1. The lowest prime number is 2.
+# prime factors - Prime numbers that are factors of an integer. For example, the prime numbers 2 and 5 are the prime factors of the number 10 
+# (2x5=10). The prime factors of an integer will not produce a remainder when used to divide that integer. 
+
+# divisor - A number (denominator) that is used to divide another number (numerator). For example, if the number 10 is divided by 5, the number 5 is the divisor.
+# sum of all divisors of a number - The result of adding all of the divisors of a number together.  
+# multiplication table - An integer multiplied by a series of numbers and their results formatted as a table or a list. For example:
