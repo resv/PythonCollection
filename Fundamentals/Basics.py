@@ -265,12 +265,6 @@ def addition_table(given_number):
 
 ** divisor is a number that divides into another without a remainder
 
-
-
-
-
-
-
 # prime numbers - Integers that have only two factors, which are the number itself multiplied by 1. The lowest prime number is 2.
 # prime factors - Prime numbers that are factors of an integer. For example, the prime numbers 2 and 5 are the prime factors of the number 10 
 # (2x5=10). The prime factors of an integer will not produce a remainder when used to divide that integer. 
@@ -278,3 +272,43 @@ def addition_table(given_number):
 # divisor - A number (denominator) that is used to divide another number (numerator). For example, if the number 10 is divided by 5, the number 5 is the divisor.
 # sum of all divisors of a number - The result of adding all of the divisors of a number together.  
 # multiplication table - An integer multiplied by a series of numbers and their results formatted as a table or a list. For example:
+
+FOR LOOPS - start at 0
+e.g.
+for x in range(5)
+    print(x)
+
+Result:
+0
+1
+2
+3
+4
+
+e.g.2
+friends = ['Taylor', 'Alex', 'Pat', 'Eli']
+for friends in friends:
+    print("Hi " + friend)
+
+e.g.3
+values = [ 23, 52, 59, 37, 48 ]
+sum = 0
+length = 0
+for value in values:
+    sum += value
+    length += 1
+print("total sum: " + str(sum) + " - Average: " + str(sum/length))
+
+When to use:
+For loops: when theres a sequence of elements that you want to iterated number
+While loops: when you want to repeat an action until a condition changes
+
+RANGE FUNCTION:
+The range() function can take up to three parameters:  range(start, stop, step) 
+range(stop)
+range(start, stop)
+range(start, stop, step)
+
+e.g. This is 2-7 and a increment of +1
+for number in range(2,7+1):
+    print(number*3)
