@@ -309,6 +309,6 @@ range(stop)
 range(start, stop)
 range(start, stop, step)
 
-e.g. This is 2-7 and a increment of +1
-for number in range(2,7+1):
+e.g. range(3) is 0 1 2 but if we add 3+1 to include 4, or you can write range(5)
+for number in range(0,3+1):
     print(number*3)
