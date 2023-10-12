@@ -4,6 +4,10 @@ https://www.programiz.com/python-programming/online-compiler/
 #PRINT STATEMENT
 print('hello')
 
+To override the insertion of the new line character and replace it with a space, add end=" " as the last item in the print() parameters. 
+This makes it possible to add the next print output to the same line, separated by a space. You might use this technique when a print() 
+function is part of a for or while loop. Example syntax:  print(x+1, end=" ")
+
 #PRINT ASSIGNMENT
 x = 6
 print(x)
@@ -300,8 +304,10 @@ for value in values:
 print("total sum: " + str(sum) + " - Average: " + str(sum/length))
 
 When to use:
-For loops: when theres a sequence of elements that you want to iterated number
-While loops: when you want to repeat an action until a condition changes
+For loops: -when theres a sequence of elements that you want to iterated number
+           -loops iterate over a sequence of elements, executing the body of the loop for each element in the sequence
+While loops: -when you want to repeat an action until a condition changes
+             -loops are used when a segment of code needs to execute repeatedly while a condition is true
 
 RANGE FUNCTION:
 The range() function can take up to three parameters:  range(start, stop, step) 
@@ -312,3 +318,22 @@ range(start, stop, step)
 e.g. range(3) is 0 1 2 but if we add 3+1 to include 4, or you can write range(5)
 for number in range(0,3+1):
     print(number*3)
+
+#RECURSION
+def recursive_function(parameters):
+    if base_case_condition(parameters):
+        return base_case_value
+    recursive_function(modified_parameters)
+-----
+e.g.
+def sum_positive_numbers(n):
+    # The base case is n being smaller than 1
+    if n < 1:
+        return 0
+
+    # The recursive case is adding this number to 
+    # the sum of the numbers smaller than this one.
+    return n + sum_positive_numbers(n-1)
+
+print(sum_positive_numbers(3)) # Should be 6
+print(sum_positive_numbers(5)) # Should be 15
