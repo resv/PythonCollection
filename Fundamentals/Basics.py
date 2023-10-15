@@ -17,6 +17,8 @@ x = 43
 x = x + 1
 print(x)
 
+----------------------------------------------------------------------------------------------------------------------------------
+
 #IF STATEMENT / CONDITIONAL STEPS
 #indentation aka 4 spaces is important. Colons are necessary
 #prints smaller then finis, "bigger" is skipped due to the 1st if being statisfied
@@ -27,6 +29,8 @@ if x > 20:
     print('Bigger')
 print('Finis')
 
+----------------------------------------------------------------------------------------------------------------------------------
+
 #WHILE LOOPS
 #condition is true in a loop so it will print until we lower N to 0
 n = 5
@@ -35,6 +39,8 @@ while n > 0 :
     n = n - 1
 print('Blastoff!')
 
+----------------------------------------------------------------------------------------------------------------------------------
+
 #CONSTANTS
 #string constants use single ' or double "
 
@@ -42,6 +48,8 @@ print('Blastoff!')
 #Reserved words: False, None, True, and, as, assert, break, class, if, def, del, elif,
 #Reserved words cont: else, except, return, for, from, global, try, import, in, is, lambda
 #Reserved words cont: while, not, or, pass, raise, finally, continue, nonlocal, with, yield
+
+----------------------------------------------------------------------------------------------------------------------------------
 
 #NAMING CONVENTION
 #Py must start with a letter or underscore_ and case sensitive
@@ -55,6 +63,8 @@ print('Blastoff!')
 #Logical operators: and, or, not
 #Loops: for, in, while, break, continue
 #Functions: def, return  
+
+----------------------------------------------------------------------------------------------------------------------------------
 
 #Arithmetic operators
 # x + y            Addition + operator returns the sum of x plus y
@@ -85,7 +95,6 @@ print('Blastoff!')
 # print(type(2.5))
    #<class 'float'>
  
-
 # Terms
 # expression - a combination of numbers, symbols, or other values that produce a result when evaluated
 # data types - classes of data (e.g., string, int, float, Boolean, etc.), which include the properties and behaviors of instances of the data type (variables)
@@ -95,6 +104,8 @@ print('Blastoff!')
 # str() - converts a value (often numeric) to a string data type
 # int() - converts a value (usually a float) to an integer data type
 # float() - converts a value (usually an integer) to a float data type?
+
+----------------------------------------------------------------------------------------------------------------------------------
 
 Function basic
 # def greeting(name, department):
@@ -124,6 +135,8 @@ Knowledge
 #Create a reusable function - Replace duplicate code with one reusable function to make the code easier to read and repurpose.
 #Refactor code - Update code so that it is self-documenting and the intent of the code is clear.
 #Add comments - Adding comments is part of creating self-documenting code. Using comments allows you to leave notes to yourself and/or other programmers to make the purpose of the code clear.
+
+----------------------------------------------------------------------------------------------------------------------------------
 
 The comparison operators include: 
 ==    (equality) 
@@ -216,7 +229,7 @@ else:
 
 Incrementation
 # x += 1  is the same thing as x = x + 1
-
+----------------------------------------------------------------------------------------------------------------------------------
 
 while Loops
 A while loop executes the body of the loop while a specified condition remains True.
@@ -267,6 +280,8 @@ def addition_table(given_number):
 17 + 2 = 19
 17 + 3 = 20
 
+----------------------------------------------------------------------------------------------------------------------------------
+
 ** divisor is a number that divides into another without a remainder
 
 # prime numbers - Integers that have only two factors, which are the number itself multiplied by 1. The lowest prime number is 2.
@@ -276,6 +291,8 @@ def addition_table(given_number):
 # divisor - A number (denominator) that is used to divide another number (numerator). For example, if the number 10 is divided by 5, the number 5 is the divisor.
 # sum of all divisors of a number - The result of adding all of the divisors of a number together.  
 # multiplication table - An integer multiplied by a series of numbers and their results formatted as a table or a list. For example:
+
+----------------------------------------------------------------------------------------------------------------------------------
 
 FOR LOOPS - start at 0
 e.g.
@@ -318,7 +335,7 @@ range(start, stop, step)
 e.g. range(3) is 0 1 2 but if we add 3+1 to include 4, or you can write range(5)
 for number in range(0,3+1):
     print(number*3)
-
+----------------------------------------------------------------------------------------------------------------------------------
 #RECURSION
 def recursive_function(parameters):
     if base_case_condition(parameters):
@@ -337,3 +354,147 @@ def sum_positive_numbers(n):
 
 print(sum_positive_numbers(3)) # Should be 6
 print(sum_positive_numbers(5)) # Should be 15
+
+----------------------------------------------------------------------------------------------------------------------------------
+#STRING INDEXING AND SLICING
+e.g.
+fruit = "Mangosteen"
+>>> fruit[1:4]
+'ang'
+
+#from X: to end
+>>> fruit[5:]
+'steen'
+
+#From 0 to 5 + from 5to end
+>>> fruit[:5] + fruit[5:]
+'Mangosteen'
+
+#index that contains the letter g using animals.index("g"), which will return the index 8
+animals = "lions tigers and bears"
+animals.index("g")
+8
+
+#substrings to locate the index where the substring begins. animals.index("bears") would return 17, since 
+#that’s the start of the substring. If there’s more than one match for a substring, the index method will return the first match
+animals = "lions tigers and bears"
+animals.index("bears")
+17
+
+----------------------------------------------------------------------------------------------------------------------------------
+
+
+
+----------------------------------------------------------------------------------------------------------------------------------
+
+
+
+----------------------------------------------------------------------------------------------------------------------------------
+
+
+
+----------------------------------------------------------------------------------------------------------------------------------
+
+
+
+----------------------------------------------------------------------------------------------------------------------------------
+
+
+
+----------------------------------------------------------------------------------------------------------------------------------
+
+
+
+----------------------------------------------------------------------------------------------------------------------------------
+
+
+
+----------------------------------------------------------------------------------------------------------------------------------
+
+
+
+----------------------------------------------------------------------------------------------------------------------------------
+
+
+
+----------------------------------------------------------------------------------------------------------------------------------
+
+
+
+----------------------------------------------------------------------------------------------------------------------------------
+
+
+
+----------------------------------------------------------------------------------------------------------------------------------
+
+
+
+----------------------------------------------------------------------------------------------------------------------------------
+
+
+
+----------------------------------------------------------------------------------------------------------------------------------
+
+
+
+----------------------------------------------------------------------------------------------------------------------------------
+
+
+
+----------------------------------------------------------------------------------------------------------------------------------
+
+
+
+----------------------------------------------------------------------------------------------------------------------------------
+
+
+
+----------------------------------------------------------------------------------------------------------------------------------
+
+
+
+----------------------------------------------------------------------------------------------------------------------------------
+
+
+
+----------------------------------------------------------------------------------------------------------------------------------
+
+
+
+----------------------------------------------------------------------------------------------------------------------------------
+
+
+
+----------------------------------------------------------------------------------------------------------------------------------
+
+
+
+----------------------------------------------------------------------------------------------------------------------------------
+
+
+
+----------------------------------------------------------------------------------------------------------------------------------
+
+
+
+----------------------------------------------------------------------------------------------------------------------------------
+
+
+
+----------------------------------------------------------------------------------------------------------------------------------
+
+
+
+----------------------------------------------------------------------------------------------------------------------------------
+
+
+
+----------------------------------------------------------------------------------------------------------------------------------
+
+
+
+----------------------------------------------------------------------------------------------------------------------------------
+
+
+
+----------------------------------------------------------------------------------------------------------------------------------
