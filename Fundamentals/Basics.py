@@ -482,11 +482,21 @@ string[x:y] - String operation that accesses a substring starting at index [x] a
             If y is omitted, the value will default to len(string).
 string.replace(old, new) - String method that returns a new string where all occurrences of an old substring have been replaced by a new substring.
 string.lower() - String method that returns a copy of the string with all lowercase characters.
-
-
 ----------------------------------------------------------------------------------------------------------------------------------
+#TUPULES AND APPEND
+def skip_elements(elements):
+	newElement = []
+	for index, element in enumerate(elements):
+		if index % 2 == 0:
+			newElement.append(element)
+	return newElement
 
+print(skip_elements(["a", "b", "c", "d", "e", "f", "g"])) # Should be ['a', 'c', 'e', 'g']
+print(skip_elements(['Orange', 'Pineapple', 'Strawberry', 'Kiwi', 'Peach'])) # Should be ['Orange', 'Strawberry', 'Peach']
 
+Here is your output:
+['a', 'c', 'e', 'g']
+['Orange', 'Strawberry', 'Peach']
 
 ----------------------------------------------------------------------------------------------------------------------------------
 
