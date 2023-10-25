@@ -484,6 +484,8 @@ string.replace(old, new) - String method that returns a new string where all occ
 string.lower() - String method that returns a copy of the string with all lowercase characters.
 ----------------------------------------------------------------------------------------------------------------------------------
 #TUPULES AND APPEND
+The first value of the tuple is the index and the second value is the element itself.
+
 def skip_elements(elements):
 	newElement = []
 	for index, element in enumerate(elements):
