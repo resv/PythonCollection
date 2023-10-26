@@ -486,6 +486,8 @@ string.lower() - String method that returns a copy of the string with all lowerc
 #TUPULES AND APPEND
 The first value of the tuple is the index and the second value is the element itself.
 
+#### for index, element in enumerate(sequence) - Iterates over both the indices and the elements in the sequence at the same time. ####
+
 def skip_elements(elements):
 	newElement = []
 	for index, element in enumerate(elements):
@@ -501,7 +503,29 @@ Here is your output:
 ['Orange', 'Strawberry', 'Peach']
 
 ----------------------------------------------------------------------------------------------------------------------------------
-List comprehension
+# List-specific operations and methods
+# One major difference between lists and tuples is that lists are mutable (changeable) and tuples are immutable (not changeable). 
+
+list[index] = x - Replaces the element at index [n] with x.
+list.append(x) - Appends x to the end of the list.
+list.insert(index, x) - Inserts x at index position [index].
+list.pop(index) - Returns the element at [index] and removes it from the list. If [index] position is not in the list, the last element in the list is returned and removed.
+list.remove(x) - Removes the first occurrence of x in the list.
+list.sort() - Sorts the items in the list.
+list.reverse() - Reverses the order of items of the list.
+list.clear() - Deletes all items in the list.
+list.copy() - Creates a copy of the list.
+list.extend(other_list) - Appends all the elements of other_list at the end of list
+----------------------------------------------------------------------------------------------------------------------------------
+# List comprehension
+[expression for variable in sequence] - Creates a new list based on the given sequence. Each element in the new list is the result of the given expression.
+Example: my_list = [ x*2 for x in range(1,11) ]
+
+[expression for variable in sequence if condition] - Creates a new list based on a specified sequence. Each element is the result of the given expression; elements are added only if the specified condition is true. 
+Example: my_list = [ x for x in range(1,101) if x % 10 == 0 ]
+
+
+
 def squares(start, end):
     return [n**2 for n in range(start,end+1) ]
 
@@ -536,7 +560,6 @@ Long form code result:
 [10, 20, 30, 40, 50, 60, 70, 80, 90, 100]
 
 ----------------------------------------------------------------------------------------------------------------------------------
-
 
 
 ----------------------------------------------------------------------------------------------------------------------------------
