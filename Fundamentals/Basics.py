@@ -502,6 +502,37 @@ Here is your output:
 ['a', 'c', 'e', 'g']
 ['Orange', 'Strawberry', 'Peach']
 
+-------
+# Another complex tuple
+The guest_list function reads in a list of tuples with the name, age, and profession of each party guest, and prints the sentence 
+"Guest is X years old and works as __." for each one. For example, guest_list(('Ken', 30, "Chef"), ("Pat", 35, 'Lawyer'), ('Amanda', 25, "Engineer")) 
+should print out: Ken is 30 years old and works as Chef. Pat is 35 years old and works as Lawyer. Amanda is 25 years old and works as Engineer. 
+Fill in the gaps in this function to do that. 
+
+def guest_list(guests):
+	for ___:
+		___
+		print(___.format(___))
+
+guest_list([('Ken', 30, "Chef"), ("Pat", 35, 'Lawyer'), ('Amanda', 25, "Engineer")])
+
+#Click Run to submit code
+"""
+Output should match:
+Ken is 30 years old and works as Chef
+Pat is 35 years old and works as Lawyer
+Amanda is 25 years old and works as Engineer
+
+Answer:
+def guest_list(guests):
+    for guest in guests:
+        name, age, profession = guest
+        print("{} is {} years old and works as {}.".format(name, age, profession))
+
+guest_list([('Ken', 30, "Chef"), ("Pat", 35, 'Lawyer'), ('Amanda', 25, "Engineer")])
+
+
+
 ----------------------------------------------------------------------------------------------------------------------------------
 # List-specific operations and methods
 # One major difference between lists and tuples is that lists are mutable (changeable) and tuples are immutable (not changeable). 
