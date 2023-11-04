@@ -771,18 +771,46 @@ print(groups_per_user({"local": ["admin", "userA"],
 		"administrator": ["admin"] }))
 
 ----------------------------------------------------------------------------------------------------------------------------------
+# OOP / METHODS 
+
+class Dog:
+  years = 0
+  def dog_years(self):
+    return self.years * 7
+    
+fido=Dog()
+fido.years=3
+print(fido.dog_years())
+
+Here is your output:
+21
+
+----------------------------------------------------------------------------------------------------------------------------------
+# CONSTRUCTORS & SPECIAL METHODS
+
+class Person:
+    def __init__(self, name):
+        self.name = name
+    def greeting(self):
+        # Should return "hi, my name is " followed by the name of the Person.
+        return "hi, my name is "+ self.name
+
+# Create a new instance with a name of your choice
+some_person = Person("bobby")  
+
+# Call the greeting method
+print(some_person.greeting())
 
 
 
 ----------------------------------------------------------------------------------------------------------------------------------
+# COMMENTS / DOCSTRINGS
 
+>>> def to_seconds(hours, minutes, seconds):
+...     """Returns the amount of seconds in the given hours, minutes and seconds."""
+...     return hours*3600+minutes*60+seconds
 
-
-----------------------------------------------------------------------------------------------------------------------------------
-
-
-
-----------------------------------------------------------------------------------------------------------------------------------
+To call a docstring: help(to_seconds)
 
 
 
