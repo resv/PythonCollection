@@ -773,6 +773,32 @@ print(groups_per_user({"local": ["admin", "userA"],
 ----------------------------------------------------------------------------------------------------------------------------------
 # OOP / METHODS 
 
+#Classes and Instances
+-Classes define the behavior of all instances of a specific class.
+-Each variable of a specific class is an instance or object.
+-Objects can have attributes, which store information about the object.
+-You can make objects do work by calling their methods.
+-The first parameter of the methods (self) represents the current instance.
+-Methods are just like functions, but they can only be used through a class.
+
+-Special methods
+-Special methods start and end with __.
+-Special methods have specific names, like __init__ for the constructor or __str__ for the conversion to string.
+
+
+
+
+
+
+#Base structure:
+class ClassName:
+    def method_name(self, other_parameters):
+        body_of_method
+
+
+
+
+#example:
 class Dog:
   years = 0
   def dog_years(self):
@@ -801,7 +827,19 @@ some_person = Person("bobby")
 # Call the greeting method
 print(some_person.greeting())
 
+------------------------ example 2 with __str__ --------------------------------
 
+
+>>> class Apple:
+...     def __init__(self, color, flavor):
+...         self.color = color
+...         self.flavor = flavor
+...     def __str__(self):
+...         return "This apple is {} and its flavor is {}".format(self.color, self.flavor)
+
+>>> jonagold = Apple("red", "sweet")
+>>> print(jonagold)
+This apple is red and its flavor is sweet
 
 ----------------------------------------------------------------------------------------------------------------------------------
 # COMMENTS / DOCSTRINGS
