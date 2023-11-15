@@ -89,7 +89,20 @@ os.rmdir("directory")
 os.listdir("directory")
 ['file1", "folder2", "music3"]
  #this may only list file names and we know that filenames do not actually tell the correct ext... so you can use the next code below to tell us what this is.
-------------------------------  ---------------------------------------------------------------
+------------------------------ Check file type in directory | os.path.isdir("x") ---------------------------------------------------------------
+os.listdir("directory")
+['file1", "folder2", "music3"]
+    dir = "directory"
+    for name in os.listdir(dir):
+        fullname = os.path.join(dir, name)
+        if os.path.isdir(fullname):
+            print("{} is a directory".format(fullname))
+        else:
+            print("{} is a file".format(fullname))
+# results            
+directory/file1 is a file
+directory/folder2 is a directory
+directory/music3 is a file
 
 ------------------------------  ---------------------------------------------------------------
 
