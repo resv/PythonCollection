@@ -36,7 +36,6 @@ lines.sort()
 print(lines)
 
 ----------------------------- Writing to a file ------------------------------------------------------------------------
-
 with open("spider.txt", "w") as file:   # "w" means to write / "r" is default and no need to pass it / "a" is append / "r+" read and write
     file.write("Lets add another line")
 #returns number of chars
@@ -44,7 +43,7 @@ with open("spider.txt", "w") as file:   # "w" means to write / "r" is default an
 ----------------------------- DIRECTORIES ------------------------------------------------------------------------
 #import os <--- must do to use across all operating systems
 
------------------------------- Remove FILE ---------------------------------------------------------------
+------------------------------ Remove FILE os.remove("x") ---------------------------------------------------------------
 import os 
 os.remove("novel.txt")
 
@@ -81,6 +80,16 @@ os.mkdir("newdir")
 ------------------------------ Change directory | os.chdir("x") ---------------------------------------------------------------
 os.chdir("differentdir")
 
+------------------------------ Change directory UP ONE LEVEL | os.chdir("x") ---------------------------------------------------------------
+current_directory = os.getcwd()
+    # Get the current working directory
+parent_directory = os.path.dirname(current_directory)
+    # Get the parent directory (go up one level)
+os.chdir(parent_directory)
+    # Change the current working directory to the parent directory
+print("Current Directory:", os.getcwd())
+    # Now the current working directory is the parent directory
+
 ------------------------------ REMOVE directory | os.rmdir("x") ---------------------------------------------------------------
 os.rmdir("directory")
 #only works if you have an empty dir
@@ -89,6 +98,7 @@ os.rmdir("directory")
 os.listdir("directory")
 ['file1", "folder2", "music3"]
  #this may only list file names and we know that filenames do not actually tell the correct ext... so you can use the next code below to tell us what this is.
+
 ------------------------------ Check file type in directory | os.path.isdir("x") ---------------------------------------------------------------
 os.listdir("directory")
 ['file1", "folder2", "music3"]
