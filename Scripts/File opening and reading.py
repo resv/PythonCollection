@@ -90,6 +90,16 @@ os.chdir(parent_directory)
 print("Current Directory:", os.getcwd())
     # Now the current working directory is the parent directory
 
+------------------------------ ABS path or parent directory | os.path.join(os.getcwd(), "..") ---------------------------------------------------------------
+import os
+
+def parent_directory():
+        # Create a relative path to the parent of the current working directory
+    relative_parent = os.path.join(os.getcwd(), '..')
+        # Return the absolute path of the parent directory
+    return os.path.abspath(relative_parent)
+print(parent_directory())
+
 ------------------------------ REMOVE directory | os.rmdir("x") ---------------------------------------------------------------
 os.rmdir("directory")
 #only works if you have an empty dir
