@@ -126,12 +126,36 @@ directory/music3 is a file
 
 ------------------  CSV FILES | CSV FILES | CSV FILES | CSV FILES | CSV FILES------------------
 import csv # required import
------------------------------- OPENING CSV | variable = open("x.txt") <br> csv_"variable" = csv.reader(variable)  ---------------------------------------------------------------
+------------------------------ CSV OPENING | variable = open("x.txt") <br> csv_"variable" = csv.reader(variable)  ---------------------------------------------------------------
+# Open the CSV file for reading
+with open("example.csv", "r") as file:
+    csv_reader = csv.reader(file)
 
-------------------------------  ---------------------------------------------------------------
+    # Process the CSV data
+    for row in csv_reader:
+        print(row)
+------------------------------ CSV READING | csv.reader(".csv")  ---------------------------------------------------------------
+# Open the CSV file for reading
+with open("example.csv", "r") as file:
+    csv_reader = csv.reader(file)
 
-------------------------------  ---------------------------------------------------------------
+    # Process the CSV data
+    for row in csv_reader:
+        print(row)
 
+------------------------------ CSV CLOSING | csv.reader(".csv")  ---------------------------------------------------------------
+  "x.csv".close()
+
+------------------------------ CSV Unpacking values (close files too) | *include "x".close() ---------------------------------------------------------------
+# Open the CSV file for reading
+with open("example.csv", "r") as file:
+    csv_reader = csv.reader(file)
+
+    # Process the CSV data
+    for row in csv_reader:
+        name, phone, role = row
+        print("name: {}, Phone: {}, Role: {}".format(name, phone, role))
+        file.close()
 ------------------------------  ---------------------------------------------------------------
 
 ------------------------------  ---------------------------------------------------------------
