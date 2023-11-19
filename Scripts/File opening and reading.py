@@ -156,14 +156,97 @@ with open("example.csv", "r") as file:
         name, phone, role = row
         print("name: {}, Phone: {}, Role: {}".format(name, phone, role))
         file.close()
-------------------------------  ---------------------------------------------------------------
+------------------------------ CSV WRITING | csv.writer("file.csv") writer.writerows(contentVariable)) contentVariable =  [["x"], ["y"], ["z"]] ---------------------------------------------------------------
+contentVariable = [["x"], ["y"], ["z"]]
+with open("file", "w") as file:
+    writer = csv.writer(file)
+    writer.writerows(contentVariable)
+    
+------------------------------ CSV READING with dictionaries | DictReader ---------------------------------------------------------------
+with open("x.csv") as file:
+    reader = csv.DictReader(file)
+    for row in reader:
+        print(("{} has {} users").format(row["name"], row["users"]))
 
-------------------------------  ---------------------------------------------------------------
+------------------------------ CSV WRITING with dictionaries | DictWriter  ---------------------------------------------------------------
+users = [{"name": "Sol Mansi", "username": "solm", "department": "IT infrastructure"}, 
+    {"name": "Lio Nelson", "username": "lion", "department": "User Experience Research"}, 
+    {"name": "Charlie Grey", "username": "greyc", "department": "Development"}]
+keys = ["name", "username", "department"]
+with open('by_department.csv', 'w') as by_department:
+    writer = csv. DictWriter(by_department, fieldnames=keys) 
+    writer.writeheader()
+    writer.writerows (users)
+------------------------------ CSV ANOTHER EXAMPLE ---------------------------------------------------------------
+import os
+import csv
 
-------------------------------  ---------------------------------------------------------------
+# Create a file with data in it
+def create_file(filename):
+  with open(filename, "w") as file:
+    file.write("name,color,type\n")
+    file.write("carnation,pink,annual\n")
+    file.write("daffodil,yellow,perennial\n")
+    file.write("iris,blue,perennial\n")
+    file.write("poinsettia,red,perennial\n")
+    file.write("sunflower,yellow,annual\n")
 
-------------------------------  ---------------------------------------------------------------
 
-------------------------------  ---------------------------------------------------------------
+# Read the file contents and format the information about each row
+def contents_of_file(filename):
+  return_string = ""
+
+  # Call the function to create the file 
+  create_file(filename)
+
+  # Open the file
+  with open(filename) as file:
+    # Read the rows of the file into a dictionary
+    reader = csv.DictReader(file)
+    # Process each item of the dictionary
+    for row in reader:
+      return_string += "a {} {} is {}\n".format(row["color"], row["name"], row["type"])
+  return return_string
+
+
+#Call the function
+print(contents_of_file("flowers.csv"))
+------------------------------ CSV SKIPPING FIRST ROW  ---------------------------------------------------------------
+import os
+import csv
+
+# Create a file with data in it
+def create_file(filename):
+  with open(filename, "w") as file:
+    file.write("name,color,type\n")
+    file.write("carnation,pink,annual\n")
+    file.write("daffodil,yellow,perennial\n")
+    file.write("iris,blue,perennial\n")
+    file.write("poinsettia,red,perennial\n")
+    file.write("sunflower,yellow,annual\n")
+
+# Read the file contents and format the information about each row
+def contents_of_file(filename):
+  return_string = ""
+
+  # Call the function to create the file 
+  create_file(filename)
+
+  # Open the file
+  with open(filename) as file:
+    # Read the rows of the file
+    rows = csv.reader(file)
+    # Process each row
+    for i, row in enumerate(rows):
+      if i == 0:
+        continue
+      # Format the return string for data rows only
+      name, color, type = row
+
+      return_string += "a {} {} is {}\n".format(name, color, type)
+  return return_string
+
+#Call the function
+print(contents_of_file("flowers.csv"))
 
 ------------------------------  ---------------------------------------------------------------
