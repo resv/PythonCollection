@@ -286,13 +286,38 @@ print(re.search(r"[a-z]way", highway"))
 ------------------------------ Search any UPPERCASE | re.search(r"[A-Z]way", highway")  ---------------------------------------------------------------
 ------------------------------ Search any NUMBER | re.search(r"[0-9]way", highway")  ---------------------------------------------------------------
 ------------------------------ Search any COMBINED | re.search(r"[a-zA-Z0-9]way", highway")  ---------------------------------------------------------------
------------------------------- Search Punctuation in any order | result = re.search(r"[.,:;?!]", text) -----------------------------------------------------
------------------------------- Search anything thats not a letter (uses ^ as an negative) | result = re.search(r"[^a-zA-Z]", text) -------------------------
------------------------------- Search anything thats not a letter and not space (uses space in bracket) | result = re.search(r"[^a-zA-Z ]", text) ----------
+------------------------------ Search PUNCTUATION in any order | result = re.search(r"[.,:;?!]", text) -----------------------------------------------------
+------------------------------ Search anything thats NOT a letter (uses ^ as an negative) | result = re.search(r"[^a-zA-Z]", text) -------------------------
+------------------------------ Search anything thats NOT a letter AND NOT SPACE (uses space in bracket) | result = re.search(r"[^a-zA-Z ]", text) ----------
 ------------------------------ Search OR (first hit will always be result) | result = re.search(r"[cat|dog]", text) ----------------------------------------
------------------------------- Search ALL hits findall | result = re.search(r"[cat|dog", text) -------------------------------------------------------------
+------------------------------ Search ALL hits findall | result = re.findall(r"[cat|dog", text) -------------------------------------------------------------
+------------------------------ Search WILD CARD .* (ignores space, keeps going until last "n")| re.search(r"py.*n", "text")---------------------------------------------------------------
+------------------------------ Search WILD CARD .* (aware of spaces, stops at the first detection)| re.search(r"py[a-z]*n", "text") ---------------------------------------------------------------
+------------------------------ Search Matching pattern of any amount of "o" next to any amount of "l" ------------------------------------------------------
+print(re.search(r"o+l+", "goldfish")) 
+<re.Match object; span=(1, 3), match='ol'> 
+>>> print(re.search(r"o+l+", "woolly")) 
+<re.Match object; span=(1, 5), match='ooll'> ---------------------------------------------------------------
 
+ ------------------------------ Search optional ? | re.search(r"p?each", "each")  ---------------------------------------------------------------
+only finds "each" but "peach will be positive"
+------------------------------  ---------------------------------------------------------------
 
+------------------------------ ESCAPING CHARS \ | re.search(r"\.com", google.com) ---------------------------------------------------------------
+treats . as a char and not a modifier.
+------------------------------ NEW LINE \n | ---------------------------------------------------------------
+------------------------------ NEW TAB \t |---------------------------------------------------------------
+------------------------------ ANY ALPHANUMERIC (Char, #, and _) \w |---------------------------------------------------------------
+
+------------------------------  ---------------------------------------------------------------
+
+------------------------------  ---------------------------------------------------------------
+
+------------------------------  ---------------------------------------------------------------
+
+------------------------------  ---------------------------------------------------------------
+
+------------------------------  ---------------------------------------------------------------
 
 
 
@@ -307,6 +332,15 @@ grep "fruit" /parent/child/
 $ = end  #e.g. grep fruit$ /parent/child #RESULT= dryfruit, bigfruit's, frozenfruit, etc
 . = wildcard #e.g. grep -i "fruit" /parent/child/ #RESULT= FRUIT, FrUIT, fruit
 -i = ignore case # e.g.  grep s.ing /usr/file.txt #result will find sting or sling
+* = means "any number of this".
+.* = therefore means an arbitrary string of arbitrary length.
++ = one or more of the preceding character. (This character is also a modifier, because it must be preceded by another character.)
+? = zero or one of the preceding character. (This character is also a modifier, because it must be preceded by another character.)
+[ ... ] = a single character that is in the enclosed group of characters; either a list of characters, like [abc], or a range of characters, like [0-9], or both [0-9 ABC w-z]
+[^ ... ] = any character except those enclosed in the square brackets, like [^0-9]
+| = acts as an OR operator, separating two regular expressions
+(  ) = encloses sub-expressions (used for grouping and for the registers variable in the STRMATCH function)
+? = meaning that it will stop as soon as it finds a matc
 ------------------------------  ---------------------------------------------------------------
 
 ------------------------------  ---------------------------------------------------------------
