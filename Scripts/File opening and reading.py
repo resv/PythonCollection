@@ -286,13 +286,11 @@ print(re.search(r"[a-z]way", highway"))
 ------------------------------ Search any UPPERCASE | re.search(r"[A-Z]way", highway")  ---------------------------------------------------------------
 ------------------------------ Search any NUMBER | re.search(r"[0-9]way", highway")  ---------------------------------------------------------------
 ------------------------------ Search any COMBINED | re.search(r"[a-zA-Z0-9]way", highway")  ---------------------------------------------------------------
------------------------------- Search Punctuation in any order | result = re.search(r"[.,:;?!]", text) ---------------------------------------------------------------
------------------------------- Search anything thats not a letter (uses ^ as an negative) | result = re.search(r"[^a-zA-Z]", text) ---------------------------------------------------------------------------------------------  ---------------------------------------------------------------
------------------------------- Search anything thats not a letter and not space (uses space in bracket) | result = re.search(r"[^a-zA-Z ]", text) ---------------------------------------------------------------
-
-------------------------------  ---------------------------------------------------------------
-
-------------------------------  ---------------------------------------------------------------
+------------------------------ Search Punctuation in any order | result = re.search(r"[.,:;?!]", text) -----------------------------------------------------
+------------------------------ Search anything thats not a letter (uses ^ as an negative) | result = re.search(r"[^a-zA-Z]", text) -------------------------
+------------------------------ Search anything thats not a letter and not space (uses space in bracket) | result = re.search(r"[^a-zA-Z ]", text) ----------
+------------------------------ Search OR (first hit will always be result) | result = re.search(r"[cat|dog]", text) ----------------------------------------
+------------------------------ Search ALL hits findall | result = re.search(r"[cat|dog", text) -------------------------------------------------------------
 
 
 
