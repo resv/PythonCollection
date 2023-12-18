@@ -285,13 +285,13 @@ print(re.search(r"[a-z]way", highway"))
 
 ------------------------------ Search Starting with | re.search(r"^[a-z]way", highway")  ---------------------------------------------------------------
 ------------------------------ Search ENDING with | re.search(r"high[a-z]$", highway")  ---------------------------------------------------------------
------------------------------- Search START UPPER + ANY AMOUNT + SPACE + ENDING WITH CERTAIN PUNC | "^[A-Z][a-z\s]*[.!?]$" ---------------------------
+------------------------------ Search START UPPER + ANY AMOUNT + SPACE + ENDING WITH CERTAIN PUNC (if ^ outside bracket) | "^[A-Z][a-z\s]*[.!?]$" ---------------------------
 ------------------------------ Search any UPPERCASE | re.search(r"[A-Z]way", highway")  ---------------------------------------------------------------
 ------------------------------ Search any NUMBER | re.search(r"[0-9]way", highway")  ---------------------------------------------------------------
 ------------------------------ Search any COMBINED | re.search(r"[a-zA-Z0-9]way", highway")  ---------------------------------------------------------------
 ------------------------------ Search up to 5 indexes COMBINED | re.search(r"\d{5}", text)  ---------------------------------------------------------------
 ------------------------------ Search PUNCTUATION in any order | result = re.search(r"[.,:;?!]", text) -----------------------------------------------------
------------------------------- Search anything thats NOT a letter (uses ^ as an negative) | result = re.search(r"[^a-zA-Z]", text) -------------------------
+------------------------------ Search anything thats NOT a letter (uses ^ as an negative if inside bracket) | result = re.search(r"[^a-zA-Z]", text) -------------------------
 ------------------------------ Search anything thats NOT a letter AND NOT SPACE (uses space in bracket) | result = re.search(r"[^a-zA-Z ]", text) ----------
 ------------------------------ Search OR (first hit will always be result) | result = re.search(r"[cat|dog]", text) ----------------------------------------
 ------------------------------ Search ALL hits findall | result = re.findall(r"[cat|dog", text) -------------------------------------------------------------
@@ -321,8 +321,13 @@ treats . as a char and not a modifier.
 ------------------------------                  re.findall(r"\w{5,10}", text) words between 5-10 chars
 ------------------------------                  re.findall(r"\w{5,}", text) min of 5 char
 ------------------------------                  re.findall(r"s{,10}") words that start with s and 11 chars
+------------------------------SPLIT re.split(r"<detect this>","<String")
+------------------------------SUBSTITUTE/REPLACE | re.sub(r"<what to replace>", "<replacement word>", "<string>")
+                                    re.sub(r"[\w.%+-]+@[\w.-]+", "REDACTED", "Received an email for go_nuts95@my.example.com") | result Received an email for REDACTED
+------------------------------SUBSTITUTE/REPLACE BUT MOVE RESULT GROUPS | re.sub(r"<detect string>", r"<order of groups>", "<string>"
+                                    re.sub(r"^([\w .-]*), ([\w .-]*)$", r"\2 \1", "Lovelace, Ada") | RESULT ->'Ada Lovelace'
 ------------------------------
------------------------------- CAPTURE GROUPS () | variable= re.search(r"^(\w*), (\w*)$", text))
+------------------------------ CAPTURE GROUPS () | variable= re.search(r"^(\w*), (\w*)$", text)
  Result looks like Lovelace, ada ---------------------------------------------------------------
 ------------------------------ PRINT GROUPS | print(variable.groups()) ---------------------------------------------------------------------------------------------
 ('Lovelace', 'ada')
@@ -355,6 +360,15 @@ rearrange_name("Hopper, Grace M.")
 'Grace M. Hopper'
 ------------------------------ NUMERIC REPETITION ---------------------------------------------------------------
 ------------------------------ REGEX PID | regex = r"\[(\d+)\']" | re.search(regex, log) ---------------------------------------------------------------
+def extract_pid(log_line): regex = r"\[(\d+)\]"
+    result = re.search(regex, log_line) 
+    if result is None:
+        return ""
+    return result[1]
+
+print(extract_pid(log))
+12345
+
 ------------------------------  ---------------------------------------------------------------
 ------------------------------  ---------------------------------------------------------------
 ------------------------------  ---------------------------------------------------------------
