@@ -7,6 +7,15 @@ print("hello, " + name)
 Enter your name: (user enters name)
 Hello, John
 
+--- INPUT w/ EXPRESSION | eval(variable)  ---------------------------------------------------------------
+>>> my_number = input('Please Enter a Number: \n')
+Please Enter a Number: 
+123 + 1
+>>> print(my_number)
+123 + 1
+>>> eval(my_number)
+124
+
 --- Continue Input w/ while loops | cont = "y"---------------------------------------------------------------
 def to_seconds (hours, minutes, seconds): 
     return hours*3600+minutes*60+seconds
@@ -49,12 +58,16 @@ export FRUIT=Pineapple
 HOME: /home/user
 SHELL: /bin/bash
 FRUIT: Pineapple
----  ---------------------------------------------------------------
 
----  ---------------------------------------------------------------
+--- check last exit code on your bash command | echo $? ---------------------------------------------------------------
+--- Check for lines - words - Chars in file | wc <file.py> ---------------------------------------------------------------
 
----  ---------------------------------------------------------------
+--- RUNNING SYSTEM COMMANDS ON PYTHON CODE | import subprocess | subprocess.run(["command", "optional flag"])---------------------------------------------------------------
+import subprocess
 
+subprocess.run(["sleep", "2"])
+#RESULT
+CompletedProcess (args=['sleep', '2'], returncode=0)
 ---  ---------------------------------------------------------------
 
 ---  ---------------------------------------------------------------
