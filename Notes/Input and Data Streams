@@ -87,7 +87,16 @@ print(result.stdout)
 b''
 print(result.stderr)
 b"rm: cannot remove 'does_not_exist': No such file or directory\n"
----  ---------------------------------------------------------------
+
+--- Set a variable for path properly by copying, then add the new directory to the copied path variable ---------------------------------------------------------------
+import os
+import subprocess
+
+my_env = os.environ.copy()
+
+my_env["PATH"] = os.pathsep.join(["/opt/myapp/", my_env["PATH"]])
+
+result = subprocess.run(["myapp"], env=my_env)
 
 ---  ---------------------------------------------------------------
 
