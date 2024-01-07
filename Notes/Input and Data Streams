@@ -98,10 +98,37 @@ my_env["PATH"] = os.pathsep.join(["/opt/myapp/", my_env["PATH"]])
 
 result = subprocess.run(["myapp"], env=my_env)
 
----  ---------------------------------------------------------------
+--- Dictionary with Logs basic initialization ---------------------------------------------------------------
+usernames = {} >>> name = "good_user"
+usernames [name] = usernames.get(name, 0) +1
+print(usernames)
+{'good_user': 1}
 
----  ---------------------------------------------------------------
+usernames[name] = usernames.get(name, 0) +1
+print(usernames)
+{'good_user': 2}
 
+
+--- Dictionary with Logs real example in a script  ---------------------------------------------------------------
+#run the file
+: ./check_cron.py syslog
+#!/usr/bin/env python3 
+import re 
+import sys
+
+logfile = sys.argv[1]
+usernames = {}
+with open(logfile) as f:
+    for line in f:
+    if "CRON" not in line:
+        continue
+    pattern = r"USER \((\w+)\)$" result = re.search(pattern, line),
+    if result is None:
+        continue
+    name = result[1]
+    usernames [name]
+    print(usernames) = usernames.get(name, 0) + 1
+print(usernames)
 ---  ---------------------------------------------------------------
 
 ---  ---------------------------------------------------------------
