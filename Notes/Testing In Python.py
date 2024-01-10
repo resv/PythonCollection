@@ -8,7 +8,7 @@ class TestRearrange (unittest.TestCase):
     def test_basic(self):
         testcase = &quot;Lovelace, Ada&quot;
         expected = &quot;Ada Lovelace&quot;
-        self.assertEqual(rearrange_name(testcase), expected)
+        self.assertEqual(rearrange_name(testcase), expected)  #yes testcase is not camel case even though in class above
 unittest.main()
 
 --------  EDGE CASES    --------------------------------------------------------------------------------------------------------------------------
