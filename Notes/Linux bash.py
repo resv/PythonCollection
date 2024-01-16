@@ -8,3 +8,10 @@ cp ../filename.txt .  | .. = (old) parent directory  . = (new) current directory
 ----- NEW FILE | touch filename.txt---------------------------------------------------------------
 ----- REMOVE | rm <filename>  ---------------------------------------------------------------
 ----- REMOVE ALL | rm *  ---------------------------------------------------------------
+----- REDIRECT RESULTS/OUTPUT TO FILE | ./script.py > results.txt
+      (CREATES NEW FILE IF DOESN'T EXIST AND ALWAYS OVERWRITES)
+----- APPEND RESULTS/OUTPUT TO FILE | ./script.py >> results.txt
+      (CREATES NEW FILE IF DOESN'T EXIST AND APPENDS)
+----- REDIRECT INPUT TO A FILE | ./script.py < results.txt
+       (input is in script, and fills input from results.txt)
+----- REDIRECT ERRORS TO A NEW FILE | ./script.py < results.txt 2> errors.txt
