@@ -45,9 +45,11 @@ git commit -m '<MESSAGE>'
 
 #Git config command
 #The Git config command is used to set the values to identify who made changes to Git repositories. 
-#To set the values of user.email and user.name to your email and name, type: 
+#To set the values of user.email and user.name to your email and name, 
 #: ~$ git config  - -global user.email "#me@example.com"
 #: ~$ git config  - -global user.name “My name”
+#(Also to check our config: git config -l)
+
 
 #Git init command = can create a new empty repository in a current directory or re-initialize an existing one. 
 #: ~/checks$ git init
@@ -72,6 +74,7 @@ git commit -m '<MESSAGE>'
 #this command is run, it tells Git to save changes. A text editor is opened that allows a commit message to be entered.
 #:~/checks$ git commit
 
+#git log = check commit history, author of each commit, timestamp and commit message
 
 #Guidelines for writing commit messages
 #A commit message is generally broken into two sections: a short summary and a description of the changes. 
