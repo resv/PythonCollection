@@ -90,3 +90,29 @@ git commit -m '<MESSAGE>'
 #Example of a commit message:  #https://commit.style/
  
 -----   ---------------------------------------------------------------
+
+Shortcut to commit:  a shortcut to stage any changes to tracked files and commit in one step
+git commit -a
+git commit -a -m "this is a message"
+
+### HEAD is a bookmark or a pointer to the current branch
+### HEAD is a bookmark or a pointer to the current branch
+### HEAD is a bookmark or a pointer to the current branch
+### HEAD is a bookmark or a pointer to the current branch
+### HEAD is a bookmark or a pointer to the current branch
+
+#shows changes files in repo, useful to track down a change that broke your code
+git log -p 
+
+
+#takes commit id as parameter and displays about the commit and associated cache
+git show <commit id>
+
+#Shows stats about change and how many lines were added or removed
+--stat 
+
+#show changes that are staged but not committed
+git diff --staged
+
+#review change before committing them
+git add -p
