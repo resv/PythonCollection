@@ -116,3 +116,41 @@ git diff --staged
 
 #review change before committing them
 git add -p
+
+#git remove
+git Rm
+
+#git move
+git mv
+
+#to ignore files, you have to create a .gitignore file.
+#write the filename to the .gitignore file.
+echo ignoreThisfile.txt > .gitignore
+#then commit
+
+
+# automatically stages the files that have been locally modified. New files which have not been published yet are not affected.
+git commit -a
+ 
+# produces patch text. A patch file is used to share your local changes with others without pushing your changes to the main branch of the repo.
+git log -p
+
+
+#  shows you one or more object(s) such as blobs, trees, tags, and commits.
+git show
+
+#is similar to the Linux `diff` command, and can show the changes between commits, changes between the working tree and index, changes between two trees, changes from a merge, and so on.
+git diff
+
+# is an alias of $ git diff --cached, which  shows all staged files compared to the named commit.
+git diff --staged
+
+# allows a user to interactively review patches before adding to the current commit.
+git add -p
+
+# is similar to the Linux `mv` command. This command can move or rename a file, directory, or symlink.
+git mv
+
+# is similar to the Linux `rm` command. This command deletes or removes a file from the working tree. 
+git rm
+
