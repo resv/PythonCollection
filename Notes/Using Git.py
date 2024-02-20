@@ -139,7 +139,8 @@ git log -p
 #  shows you one or more object(s) such as blobs, trees, tags, and commits.
 git show
 
-#is similar to the Linux `diff` command, and can show the changes between commits, changes between the working tree and index, changes between two trees, changes from a merge, and so on.
+#is similar to the Linux `diff` command, and can show the changes between commits, changes between the working tree and index, 
+# changes between two trees, changes from a merge, and so on.
 git diff
 
 # is an alias of $ git diff --cached, which  shows all staged files compared to the named commit.
@@ -154,3 +155,33 @@ git mv
 # is similar to the Linux `rm` command. This command deletes or removes a file from the working tree. 
 git rm
 
+# used to switch branches. For example, you might want to pull from your main branch. 
+# In this case, you would use the command git checkout main. This will switch to your main branch, 
+# allowing you to pull. Then you could switch to another branch by using the command  git checkout <branch>.
+git checkout
+
+# used to switch branches. For example, you might want to pull from your main branch. In this case, 
+# you would use the command git checkout main. This will switch to your main branch, allowing you to pull. 
+# Then you could switch to another branch by using the command  git checkout <branch>.
+git reset
+
+# Which will temporarily shelve or stash your current changes. This way, your current changes are kept safe, 
+# and you can come back to them if needed.
+git stash
+
+# is used to make changes to your most recent commit after-the-fact, which can be useful for making notes 
+# about or adding files to your most recent commit. Be aware that this git --amend command rewrites and 
+# replaces your previous commit, so it is best not to use this command on a published commit.
+git commit --amend
+
+
+# makes a new commit which effectively rolls back a previous commit. Unlike the git reset command which 
+# rewrites your commit history, the git revert command creates a new commit which undoes the changes in 
+# a specific commit. Therefore, a revert command is generally safer than a reset command.
+git revert
+ 
+
+#Additionally, there are some interesting considerations about how git object data is stored, such as the usage of SHA-1.
+# 1. Confirming that the contents of a file have not changed (digital signature). 
+# 2. Serving as an identifier for the file itself (a token or fingerprint).
+Sha-1
