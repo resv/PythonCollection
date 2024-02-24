@@ -185,3 +185,36 @@ git revert
 # 1. Confirming that the contents of a file have not changed (digital signature). 
 # 2. Serving as an identifier for the file itself (a token or fingerprint).
 Sha-1
+
+
+# can be used to list, create, or delete branches.
+git branch
+
+# can be used to create a new branch in your repository. 
+git branch <name>
+
+# can be used to delete a branch from your repository.
+git branch -d <name>
+
+# forces a branch to be deleted.
+git branch -D <name>
+ 
+# switches your current working branch.
+git checkout <branch>
+ 
+# creates a new branch and makes it your current working branch. 
+git checkout -b <new-branch>
+
+# joins changes from one branch into another branch.
+git merge <branch>
+
+# can only be used after merge conflicts. This command will abort the merge and try to go back to the pre-merge state.
+git merge --abort
+
+# prints an ASCII graph of the commit and merge history.
+git log --graph 
+
+# prints each commit on a single line.
+git log --oneline
+
+ 
