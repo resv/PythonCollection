@@ -218,3 +218,21 @@ git log --graph
 git log --oneline
 
  
+ ---------------------------------------- REMOTES -----------------------------------------------
+# allows you to manage the set of repositories or “remotes” whose branches you track
+$ git remote 
+
+# is similar to $ git remote, but adding the -v shows more information such as the remote URL.
+git remote -v
+
+# shows some information about a single remote repo.
+git remote show <name>
+
+# fetches updates for remotes or remote groups.
+git remote update
+
+# can download objects and refs from a single repo, a single URL, or from several repositories at once.
+git fetch
+
+# lists remote branches and can be combined with other branch arguments to manage remote branches.
+git branch -r
