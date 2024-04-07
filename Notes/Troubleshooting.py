@@ -24,6 +24,17 @@ reducing the effectiveness of “nice” and ”renice” commands. Even program
 
 
 ----- ---------------------------------------------------------------
+1. Memcached*  can cache database queries in memory for faster processing of automated tasks?
+2. Asyncio* module specifies parts of a code to run in separate asynchronous events?
+3. Threading*  allows our program to run multiple instructions in parallel?
+4. Memory management* is the name of the field of study in computer science that concerns itself with writing programs and operations that run in parallel efficiently?
+5. I/O bound* is what would we call a program that often leaves our CPU with little to do as it waits on data from a local disk and the Internet?
+
+
+
+
+
+
 
 
 ----- ---------------------------------------------------------------
